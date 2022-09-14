@@ -8,18 +8,18 @@ import java.util.Scanner;
 
 public class phoneManager extends Phone {
     public static Scanner input = new Scanner(System.in);
-    public static String phoneName;
-    public static String manufacturer;
-    public static String phoneIMEI;
-    public static double price;
-    public static String releaseDate;
-    public static double RAM;
-    public static double ROM;
-    public static String chip;
-    public static String screenSize;
-    public static String phoneSize;
-    private static List<phoneManager> phonesList;
-    private phoneFile PhoneFile;
+    public String phoneName;
+    public String manufacturer;
+    public String phoneIMEI;
+    public double price;
+    public String releaseDate;
+    public double RAM;
+    public double ROM;
+    public String chip;
+    public String screenSize;
+    public String phoneSize;
+    public static List<phoneManager> phonesList;
+    public phoneFile PhoneFile;
 
     public phoneManager() {
         PhoneFile = new phoneFile();
@@ -27,9 +27,10 @@ public class phoneManager extends Phone {
     }
 
     //    Them dien thoai
-    public static void phoneAdd() throws FileNotFoundException, NotSerializableException {
+    public void phoneAdd() throws FileNotFoundException, NotSerializableException {
         int listAdd = (phonesList.size() > 0) ? (phonesList.size() + 1) : 1;
-        System.out.println("Thiet bi thu: ");
+        System.out.println("So thiet bi can nhap: ");
+        listAdd = input.nextInt();
         phoneName = inputPhoneName();
         manufacturer = inputManufacturer();
         phoneIMEI = inputPhoneIMEI();
@@ -46,58 +47,61 @@ public class phoneManager extends Phone {
     }
 
 
-    private static String inputPhoneName() {
+    private String inputPhoneName() {
         System.out.print("Nhap ten thiet bi: ");
+        phoneName = input.nextLine();
         return input.nextLine();
     }
 
-    private static String inputManufacturer() {
-        System.out.println("Nha phat hanh: ");
+    private String inputManufacturer() {
+        System.out.print("Nha phat hanh: ");
         return input.nextLine();
     }
 
-    private static String inputPhoneIMEI() {
-        System.out.println("IMEI: ");
+    private String inputPhoneIMEI() {
+        System.out.print("IMEI: ");
         return input.nextLine();
     }
 
-    private static double inputPrice() {
-        System.out.println("Nhap gia ban: ");
+    private double inputPrice() {
+        System.out.print("Nhap gia ban: ");
         return input.nextDouble();
     }
 
-    private static String inputReleaseDate() {
-        System.out.println("Ngay phat hanh: ");
+    private String inputReleaseDate() {
+        System.out.print("Ngay phat hanh: ");
+        releaseDate = input.nextLine();
         return input.nextLine();
     }
 
-    private static double inputRAM() {
-        System.out.println("Nhap RAM: ");
+    private double inputRAM() {
+        System.out.print("Nhap RAM: ");
         return input.nextDouble();
     }
 
-    private static double inputROM() {
-        System.out.println("Nhap ROM: ");
+    private double inputROM() {
+        System.out.print("Nhap ROM: ");
         return input.nextDouble();
     }
 
-    private static String inputChip() {
-        System.out.println("Nhap ten chip: ");
+    private String inputChip() {
+        System.out.print("Nhap ten chip: ");
+        chip = input.nextLine();
         return input.nextLine();
     }
 
-    private static String inputPhoneSize() {
-        System.out.println("Kich thuoc thiet bi: ");
+    private String inputPhoneSize() {
+        System.out.print("Kich thuoc thiet bi: ");
         return input.nextLine();
     }
 
-    private static String inputScreenSize() {
-        System.out.println("Kich thuoc man hinh: ");
+    private String inputScreenSize() {
+        System.out.print("Kich thuoc man hinh: ");
         return input.nextLine();
     }
 
     //    Cap nhat dien thoai
-    public static void phoneUpdate() throws FileNotFoundException, NotSerializableException {
+    public void phoneUpdate() throws FileNotFoundException, NotSerializableException {
         boolean isExisted = false;
         double size = phonesList.size();
         for (int i = 0; i < size; i++) {
@@ -122,7 +126,7 @@ public class phoneManager extends Phone {
     }
 
     //    Xoa dien thoai
-    public static void phoneDelete() throws FileNotFoundException, NotSerializableException {
+    public void phoneDelete() throws FileNotFoundException, NotSerializableException {
         Phone p1 = null;
         int size = phonesList.size();
         for (int i = 0; i < size; i++) {

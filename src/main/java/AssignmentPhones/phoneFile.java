@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class phoneFile {
-    private static final String phoneFileName = "phones.txt";
+    public static final String phoneFileName = "phones.txt";
 
     public static void write(List<phoneManager> phonesList) throws FileNotFoundException, NotSerializableException {
         FileOutputStream fos = null;
@@ -36,6 +36,8 @@ public class phoneFile {
             phonesList = (List<phoneManager>) ois.readObject();
 
         } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (EOFException e) {
             e.printStackTrace();
         } catch (IOException | ClassNotFoundException e) {
             throw new RuntimeException(e);
