@@ -57,10 +57,10 @@ public class main {
                 switch (caseTool) {
                     case 1:
                         System.out.println("1. Loc theo nha san xuat");
+                        pm.SortByManufacturer();
                         break;
                     case 2:
                         System.out.println("2. Sap xep theo ngay san xuat");
-                        pm.SortByManufacturer();
                         break;
                     case 3:
                         System.out.println("3. Loc theo gia");
@@ -72,7 +72,7 @@ public class main {
                 break;
             case 0:
                 System.out.println("Thoat chuong trinh");
-                exit = true;
+//                exit = true;
                 break;
         }
 //        if (exit) {
