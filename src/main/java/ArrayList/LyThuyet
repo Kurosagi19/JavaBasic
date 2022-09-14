@@ -1,0 +1,46 @@
+List, Set, Map gọi chung là Collection
+
+ArrayList
+- ArrayList là tập hợp các phần tử không phân biệt kiểu dữ liệu
+- Có 2 kiểu:
++ ArrayList cùng kiểu dữ liệu
++ ArrayList không cùng kiểu dữ liệu
+- ArrayList có thể có số phần tử hoặc không có số phần tử
+=> String, Number, Object
+# ArrayList
+= Chạy theo chỉ số Index
+= Index là duy nhất
+= Có thể làm việc với Index
+= Các giá trị của các phần tử có thể giống nhau
+= Lưu các phần tử theo thứ tự
+= Có thể update giá trị cảu phần tử
+
+Set:
+- HashSet:
+
+# HashSet
+= Không dùng Index => Không thể làm việc với Index
+= Giá trị của các phần tử là duy nhất
+= Lưu các phần tử không theo thứ tự
+= Không thể update giá trị của phần tử
+
+Map
+- HashMap:
+
+# HashMap
+= Lưu dữ liệu theo dạng key => value
+= Key là duy nhất
+= Value của các phần tử có thể bằng nhau
+= Key có thể chứa các kiểu dữ liệu String, int
+= Value có thể chứa các kiểu dữu liệu String, Number, Obj
+
+
+
+
+
+
+
+
+
+
+index = Key đặc biệt

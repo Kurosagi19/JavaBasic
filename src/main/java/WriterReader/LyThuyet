@@ -1,0 +1,14 @@
+Đọc, ghi file: txt
+- Đọc file: FileReader | FileInputStream
+- Có 2 cách:
++ C1:
+FileReader <tên Object> = new FileReader("<path file | name file>");
++ C2:
+File file = new File("<path file | name file>");
+FileReader <tên Object> = new FileReader(file);
+Có 2 loại link file: Static pathfile | Dynamic pathfile
+-Đọc file: method: read(); => đọc từng kí tự trong file => trả về kí tự theo dạng số nguyên int
+
+- Ghi file: FileWriter | FileOutputStream
+- Có 2 cách:
++ C1:

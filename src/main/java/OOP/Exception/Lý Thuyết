@@ -1,0 +1,23 @@
+- Ngoại lệ: là những trường hợp có thể xảy ra trong code khi code vẫn đang run bình thường nhưng gặp lỗi tại 1 trường hợp đặc biệt nào đó (Exception).
+Example: 2 số nguyên a, b. Tính a/b. => Nhập a, b => Thương = a/b => b = 0 là Exception.
+
+try {
+     khối lệnh try;
+}
+catch (Exception_class_name ex) {
+     khối lệnh catch;
+}
+finally {
+         khối lệnh finally;
+}
+- Trong khối lệnh try...catch có 1 khối try và n khối catch.
+- Có 2 loại Exception:
+  + Checked Exception: là Exception thường xuyên xảy ra, bắt buộc phải có try...catch để chạy đc chương trình.
+  + Unchecked Exception: thường xảy ra cho viết code sai.
+- Throw: dùng để ném ra một Exception nào đó.
+       throw new Exception_class_name;
+- Throws: dùng để định nghĩa một Exception nào đó => cả Checked và Unchecked.
+       return_type method_name() throws Exception_class_name {
+       // method code
+}
+
