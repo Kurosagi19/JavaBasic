@@ -2,7 +2,7 @@ package Phone;
 
 import java.util.Scanner;
 
-import static Phone.main.menuP;
+import static Phone.main.menuPhone;
 
 public class Phones {
     static Phones[] arr = new Phones[1000];
@@ -77,11 +77,11 @@ public class Phones {
             System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         }
         System.out.println("Them hoan tat " + count + " DT.");
-        main.menuP();
+        main.menuPhone();
     }
 
     public static void display(){
-        System.out.println("~~~~~~~~~~ DANH SACH DIEN THOAI ~~~~~~~~~~");
+        System.out.println("~~~~~~~~~~ DANH SACH THIET BI HIEN CO ~~~~~~~~~~");
         for (int count = 0; count < a; count++){
             System.out.println("DIEN THOAI THU " + (count + 1) + ": ");
             System.out.println("Ten dien thoai: " + arr[count].name);
@@ -104,7 +104,7 @@ public class Phones {
         int search;
         int choice;
         Scanner input = new Scanner(System.in);
-        System.out.println("~~~~~~~~~~ CHINH SUA DIEN THOAI ~~~~~~~~~~");
+        System.out.println("~~~~~~~~~~ CHINH SUA THONG TIN THIET BI ~~~~~~~~~~");
         System.out.print("Nhap IMEI cua DT muon sua: ");
         search = input.nextInt();
         for(int count = 0; count < a; count++){
@@ -165,18 +165,18 @@ public class Phones {
                         break;
                     }
                     case 0:{
-                        main.menuP();
+                        main.menuPhone();
                         break;
                     }
                     default:{
-                        System.out.println("So da nhap khong hop le.");
-                        System.out.println("Vui long nhap lai.");
+                        System.out.println("So da nhap khong hop le");
+                        System.out.println("Vui long nhap lai");
                         fix();
                     }
                 }
             }
         }
-        main.menuP();
+        main.menuPhone();
     }
 
     public static void fixIMEI(int count){
@@ -253,11 +253,11 @@ public class Phones {
         int num;
         int del;
         Scanner input = new Scanner(System.in);
-        System.out.println("_____________ XOA DIEN THOAI _____________");
-        System.out.print("Nhap so luong DT muon xoa: ");
+        System.out.println("_____________ XOA THIET BI _____________");
+        System.out.print("Nhap so luong dien thoai muon xoa: ");
         num = input.nextInt();
         for (int count = 0; count < num; count++){
-            System.out.print("Nhap IMEI DT muon xoa: ");
+            System.out.print("Nhap IMEI dien thoai muon xoa: ");
             del = input.nextInt();
             for(int x = 0; x < a; x++){
                 if(del == arr[x].IMEI){
@@ -297,25 +297,25 @@ public class Phones {
             System.out.println("Do day dien thoai: " + arr[count].phThickness);
             System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         }
-        main.menuT();
+        main.menuTool();
     }
 
     public static void sort() {
         int choice;
         Scanner input = new Scanner(System.in);
         System.out.println("Lua chon thu tu muon sap xep:");
-        System.out.println("1. Thap den cao.");
-        System.out.println("2. Cao den thap.");
+        System.out.println("1. Thap den cao");
+        System.out.println("2. Cao den thap");
         System.out.println("0. Quay tro lai menu");
         System.out.print("Chon: ");
         choice = input.nextInt();
         switch (choice){
             case 1: sortPriceL2H();
             case 2: sortPriceH2L();
-            case 0: main.menuT();
+            case 0: main.menuTool();
             default: {
-                System.out.println("So da nhap khong hop le.");
-                System.out.println("Vui long nhap lai.");
+                System.out.println("So da nhap khong hop le");
+                System.out.println("Vui long nhap lai");
                 sort();
             }
         }
@@ -348,14 +348,14 @@ public class Phones {
             System.out.println("Do day dien thoai: " + arr[count].phThickness);
             System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         }
-        main.menuT();
+        main.menuTool();
     }
 
     public static void filterPrice() {
         int pr;
         int count;
         Scanner input = new Scanner(System.in);
-        System.out.print("Nhap gia tien:");
+        System.out.print("Nhap gia tien: ");
         pr = input.nextInt();
         for (count = 0; count < a; count++){
                 if(pr == arr[count].price){
@@ -381,8 +381,8 @@ public class Phones {
         Scanner input = new Scanner(System.in);
         System.out.println("===== DANH SACH DIEN THOAI SAP XEP THEO NGAY SAN XUAT =====");
         System.out.println("Lua chon thu tu muon sap xep:");
-        System.out.println("1. Cu nhat den moi nhat.");
-        System.out.println("2. Moi nhat den cu nhat.");
+        System.out.println("1. Cu nhat den moi nhat");
+        System.out.println("2. Moi nhat den cu nhat");
         System.out.println("0. Quay tro lai menu");
         System.out.print("Chon: ");
         choice = input.nextInt();
@@ -394,11 +394,11 @@ public class Phones {
                 sortDateH2L();
                 break;
             case 0:
-                main.menuT();
+                main.menuTool();
                 break;
             default: {
-                System.out.println("So da nhap khong hop le.");
-                System.out.println("Vui long nhap lai.");
+                System.out.println("So da nhap khong hop le");
+                System.out.println("Vui long nhap lai");
                 sortDate();
                 break;
             }
@@ -489,7 +489,7 @@ public class Phones {
         String manu;
         int count;
         Scanner input = new Scanner(System.in);
-        System.out.print("Nhap Nha san xuat:");
+        System.out.print("Nhap Nha san xuat: ");
         manu = input.nextLine();
         for (count = 0; count < a; count++){
             if(manu.equals(arr[count].manufacturer)){
